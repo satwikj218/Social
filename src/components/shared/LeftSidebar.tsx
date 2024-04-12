@@ -60,6 +60,7 @@ const LeftSidebar = () => {
                     src={link.imgURL} 
                     alt={link.label} 
                     className={`group-hover: invert-white ${isActive && 'invert-white'}`} />
+                    {link.label}
                   </NavLink>
                 </li>
               )

@@ -18,9 +18,9 @@ const SignupForm = () => {
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext()
   const navigate = useNavigate()
 
-  const { mutateAsync: createUserAccount, isPending: isCreatingAccount } = useCreateUserAccount()
+  const { mutateAsync: createUserAccount, isLoading: isCreatingAccount } = useCreateUserAccount()
 
-  const { mutateAsync: signInAccount, isPending: isSigningIn } = useSignInAccount()
+  const { mutateAsync: signInAccount, isLoading: isSigningIn } = useSignInAccount()
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -78,7 +78,7 @@ const SignupForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel><br /><br />
+                <FormLabel>Name</FormLabel>
                 <FormControl>
                   <Input type='text' className="shad-input" {...field} />
                 </FormControl>
@@ -92,7 +92,7 @@ const SignupForm = () => {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Userame</FormLabel><br /><br />
+                <FormLabel>Userame</FormLabel>
                 <FormControl>
                   <Input type='text' className="shad-input" {...field} />
                 </FormControl>
@@ -106,7 +106,7 @@ const SignupForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel><br /><br />
+                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input type='email' className="shad-input" {...field} />
                 </FormControl>
@@ -120,7 +120,7 @@ const SignupForm = () => {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel><br /><br />
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input type='password' className="shad-input" {...field} />
                 </FormControl>

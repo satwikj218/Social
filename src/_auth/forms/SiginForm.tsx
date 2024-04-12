@@ -65,7 +65,7 @@ const SigninForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel><br /><br />
+                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input type='email' className="shad-input" {...field} />
                 </FormControl>
@@ -79,7 +79,7 @@ const SigninForm = () => {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel><br /><br />
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input type='password' className="shad-input" {...field} />
                 </FormControl>
